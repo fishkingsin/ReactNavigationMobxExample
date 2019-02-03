@@ -1,6 +1,6 @@
 // App/RootNavigator.js
 
-import { createStackNavigator, createAppContainer } from 'react-navigation'
+import { createStackNavigator } from 'react-navigation'
 
 import AScreen from '~cont/AScreen'
 import BScreen from '~cont/BScreen'
@@ -14,4 +14,4 @@ const RootNavigator = createStackNavigator({
   initialRouteName: 'root',
 })
 
-export default createAppContainer(RootNavigator);
+export default RootNavigator;

@@ -1,16 +1,15 @@
 // App/index.js
 import React, { Component } from 'react'
 import { View, StyleSheet } from 'react-native'
+import { createAppContainer } from 'react-navigation'
 import { initStore, Provider } from '~/store'
-import RootContainer from '~cont/RootContainer'
 import RootNavigator from '~/App/RootNavigator'
-
-const store = initStore({RootNavigator})
+const AppContainer = createAppContainer(RootNavigator)
 
 export default () => (
   <View style={styles.container}>
-    <Provider store={store} >
-      <RootNavigator />
+    <Provider store={initStore({RootNavigator})} >
+      <AppContainer />
     </Provider>
   </View>
 )

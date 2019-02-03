@@ -1,20 +1,25 @@
 import React, { Component } from 'react'
 import { View, StyleSheet, Text, Button } from 'react-native'
 import PropTypes from 'prop-types';
-export default class RootContainer extends Component{
+import { observer, inject } from 'mobx-react/native';
+@inject('store') @observer
+class RootContainer extends Component{
     static propTypes = {
         navigation: PropTypes.object.isRequired,
+        store: PropTypes.object.isRequired,
     }
     constructor(props) {
         super(props);
         console.log('props', props);
     }
+
+    
     toScreenA = () => {
-        this.props.navigation.push('AScreen');
+        this.props.navigation.push('A');
     }
 
     toScreenB = () => {
-        this.props.navigation.push('BScreen');
+        this.props.navigation.push('B');
     }
     
     render() {
@@ -27,4 +32,6 @@ export default class RootContainer extends Component{
         );
     }
 }
+
+export default RootContainer;
   

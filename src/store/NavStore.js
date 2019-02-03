@@ -27,7 +27,9 @@ export default class NavStore {
 
   goToSessionModal = (actionType) => this.dispatch(NavigationActions.reset({ index: 1, actions: [{ routeName: 'Internal' }, { routeName: 'Session', params: { actionType } }] }))
 
-  go = (routeName, params) => this.dispatch(NavigationActions.navigate({ routeName, params }))
+  go = (routeName, params) => {
+    this.dispatch(NavigationActions.navigate({ routeName, params }));
+  }
 
   back = () => this.dispatch(NavigationActions.back())
 

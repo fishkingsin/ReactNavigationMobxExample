@@ -4,6 +4,7 @@
 import { configure } from 'mobx';
 
 import NavStore from './NavStore'
+import TodoStore from './TodoStore'
 
 export { Provider } from 'mobx-react'
 
@@ -13,6 +14,7 @@ configure({
 export class RootStore {
   constructor ({RootNavigator}) {
     this.nav = new NavStore(RootNavigator)
+    this.todo = new TodoStore()
   }
 }
 
