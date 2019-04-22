@@ -16,8 +16,8 @@ export default class NavStore {
   @observable currentSubRoute = null
   subscriberRoot = null
 
-  constructor (rootNavigator, subscriberRoot = 'root') {
-    this.rootNavigator = rootNavigator
+  constructor (appContainer, subscriberRoot = 'root') {
+    this.rootNavigator = appContainer;
     this.subscribers.set(subscriberRoot, new Set())
     this.addListener = this.createAddListener(subscriberRoot)
     this.subscriberRoot = subscriberRoot

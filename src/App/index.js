@@ -6,9 +6,10 @@ import { initStore, Provider } from '~/store'
 import RootNavigator from '~/App/RootNavigator'
 const AppContainer = createAppContainer(RootNavigator)
 
+const store = initStore({RootNavigator});
 export default () => (
   <View style={styles.container}>
-    <Provider store={initStore({RootNavigator})} >
+    <Provider store={store} >
       <AppContainer />
     </Provider>
   </View>

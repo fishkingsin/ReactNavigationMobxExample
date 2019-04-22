@@ -16,6 +16,7 @@ class RootContainer extends Component{
     
     toScreenA = () => {
         this.props.navigation.push('A');
+        
     }
 
     toScreenB = () => {
