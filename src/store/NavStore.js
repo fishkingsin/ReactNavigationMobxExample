@@ -1,10 +1,10 @@
 // Store/NavStore.js
 
-import { NavigationActions } from 'react-navigation'
-import { observable, action, toJS } from 'mobx'
-import invariant from 'invariant'
+import { NavigationActions } from 'react-navigation';
+import { observable, action, toJS } from 'mobx';
+import invariant from 'invariant';
 
-const DEFAULT_ROUTE = 'Launch'
+const DEFAULT_ROUTE = 'Launch';
 
 export default class NavStore {
   @observable state = {
@@ -73,7 +73,7 @@ export default class NavStore {
   createAddListener (key) {
     invariant(
       this.subscribers.has(key),
-      "Cannot listen for a key that isn't associated with a Redux store. " +
+      'Cannot listen for a key that isn\'t associated with a Redux store. ' +
         'First call `createReactNavigationReduxMiddleware` so that we know ' +
         'when to trigger your listener.'
     )

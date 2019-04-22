@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import { View, StyleSheet, Text, Button } from 'react-native'
+import React, { Component } from 'react';
+import { View, StyleSheet, Text, Button } from 'react-native';
 import PropTypes from 'prop-types';
 import { observer, inject } from 'mobx-react/native';
 @inject('store') @observer
@@ -25,10 +25,10 @@ class RootContainer extends Component{
     
     render() {
         return (
-            <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+            <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
                 <Text>Home Screen</Text>
-                <Button onPress={this.toScreenA} title="A Screen" />
-                <Button onPress={this.toScreenB} title="B Sceen"/>
+                <Button onPress={this.toScreenA} title='A Screen' />
+                <Button onPress={this.toScreenB} title='B Sceen'/>
             </View>
         );
     }
